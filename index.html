@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wearable Telemetry Demo</title>
+<style>
+body { font: 1rem system-ui, sans-serif; background: #101d28; color: #eff6fc; margin: 0; }
+main { max-width: 42rem; margin: 4rem auto; padding: 0 1.25rem; }
+section { background: #1b3040; border-radius: 1rem; padding: 1.4rem; margin: 1.2rem 0; }
+output { display: block; font-size: 2rem; font-variant-numeric: tabular-nums; }
+button { padding: .7rem 1rem; border: 0; border-radius: .4rem; background: #a5f3d0; color: #10252a; font: inherit; cursor: pointer; }
+canvas { width: 100%; height: auto; display: block; margin-top: 1rem; }
+</style>
+<main>
+  <h1>Wearable telemetry</h1>
+  <p>Simulated pulse readings for an engineering demonstration.</p>
+  <section>
+    <label for="pulse">Pulse</label>
+    <output id="pulse">Waiting for sample</output>
+    <canvas id="chart" width="600" height="200" role="img" aria-label="Pulse trend over the last 60 samples"></canvas>
+  </section>
+  <button id="toggle" type="button">Pause simulation</button>
+  <button id="export" type="button">Export recent samples</button>
+  <p id="status" role="status">Simulation running</p>
+</main>
+<script src="telemetry.js" defer></script>
+</html>
